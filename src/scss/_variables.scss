@@ -1,0 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,700);
+@import url('https://fonts.googleapis.com/css?family=Abel|Exo+2');
+
+//@import 'font-awesome';
+
+$black: #333;
+$white: #FFF;
+$gray: lighten($black, 40%);
+$red: rgb(134, 31, 31);
+$beige: #D6CCAD;
+$orange: #E06014;
+$blue: #5AAED6;
+$colors: darken($red, 15%), $red, darken($blue, 25%), $blue;
+$font: 'Abel','Roboto', sans-serif;

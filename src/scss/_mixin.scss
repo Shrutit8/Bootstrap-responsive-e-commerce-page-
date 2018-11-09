@@ -1,0 +1,72 @@
+@import 'variables';
+
+  
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -moz-transform: $property;
+    transform: $property;
+    -ms-transform: $property;
+    -o-transform: $property;
+}
+  @mixin box-sizing($property){
+      -webkit-box-sizing: $property;
+      -moz-box-sizing: $property;
+      box-sizing: $property;
+      }
+
+@mixin transform-origin($property) {
+    -webkit-transform-origin: $property;
+    -moz-transform-origin: $property;
+    transform-origin: $property;
+  }
+
+  
+@mixin transition($property) {
+    transition: $property;
+    -webkit-transition: $property;
+    -moz-transition: $property;
+    -ms-transition: $property;
+    -o-transition: $property;
+}
+
+
+@mixin animation($property) {
+    animation: $property;
+    -webkit-animation: $property;
+    -moz-animation: $property;
+    -moz-animation: $property;   
+     -ms-animation: $property;    
+    -o-transition: $property;
+}
+  
+@mixin border-radius($property){
+    border-radius: $property;
+    -webkit-border-radius: $property;
+    -moz-border-radius: $property;
+    -ms-border-radius: $property;
+    -o-border-radius: $property;
+}
+
+@mixin box-shadow($property){
+    box-shadow: $property; 
+}
+
+  $num: 4;
+
+@while $num > 0 {
+    .accordion-group li:nth-child(#{$num}) {
+        & .accordion-overlay{
+            background-color: darken($red,15%);
+            opacity: 0.8;
+        }
+
+        &.out {
+            .accordion-overlay{
+                background-color: $blue;
+                opacity: 0;
+            }
+        }
+    }
+
+    $num: $num - 1;
+}
